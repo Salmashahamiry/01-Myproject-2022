@@ -8,18 +8,26 @@
 </head>
 
 <body>
-	<div class="container  mt-3 w-50 ">
-		<img th:src="@{/img/maadoart-logo.jpg} " alt="logopicture">
-	</div>
-	<div class="container  mt-3 w-50">
+	<div class="container mt-3 w-50">
 		<nav class="navbar navbar-expand-lg navbar-light bg-info">
-			<a class="navbar-brand font-weight-bold" href="#">MAADO ART</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
+
+
+					<li class="nav-item">
+
+						<a class="navbar-brand" href="#">
+							<img th:src="@{/img/newlogo1.png}" width="30" height="30"
+								class="d-inline-block align-top" alt="logo">
+							MAADO ART
+
+						</a>
+					</li>
+
 					<li class="nav-item active">
 						<a class="nav-link font-weight-bold" th:href="@{/Home}">Home<span
 								class="sr-only">(current)</span></a>
@@ -35,12 +43,19 @@
 						<a class="nav-link font-weight-bold" th:href="@{/Orders}"> Orders
 						</a>
 					</li>
+
+
+					<li class="nav-item">
+						<a class="nav-link font-weight-bold" th:href="@{/login}"> Log out
+						</a>
+					</li>
+
 				</ul>
 			</div>
 		</nav>
 	</div>
 
-	<div class="jumbotron border border-success container w-50 mt-4 text-center ">
+	<div class="jumbotron bg-light border border-success container w-50 mt-4 text-center ">
 		<h5 class="display-5 font-weight-bold ">Welcome Admin to Online Shopping System!</h5>
 		<hr class="my-4  w-50">
 
