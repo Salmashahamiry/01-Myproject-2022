@@ -3,32 +3,14 @@ public class Order {
 	
 	int orderId;
 	int productId;
-	int qty;
-	int unitPrice;
-	int totalPrice;
-	String dateOfOrder;
-		
-	
-	Order(){
-		
-		 orderId=0;		
-		 
-		 productId=0;		
-		 qty=0;
-		 unitPrice=0;
-		 totalPrice=0;
-		 dateOfOrder="";
-		
-	}
-	
-	public Order(int orderId, int productId, int qty, int unitPrice, int totalPrice, String dateOfOrder) {
+	int customerId;
+	String status;//sent or not sent		
+	public Order(int orderId, int productId, int customerId, String status) {
 		super();
 		this.orderId = orderId;
 		this.productId = productId;
-		this.qty = qty;
-		this.unitPrice = unitPrice;
-		this.totalPrice = totalPrice;
-		this.dateOfOrder = dateOfOrder;
+		this.customerId = customerId;
+		this.status = status;
 	}
 	public int getOrderId() {
 		return orderId;
@@ -42,31 +24,21 @@ public class Order {
 	public void setProductId(int productId) {
 		this.productId = productId;
 	}
-	public int getQty() {
-		return qty;
+	public int getCustomerId() {
+		return customerId;
 	}
-	public void setQty(int qty) {
-		this.qty = qty;
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
 	}
-	public int getUnitPrice() {
-		return unitPrice;
+	public String getStatus() {
+		return status;
 	}
-	public void setUnitPrice(int unitPrice) {
-		this.unitPrice = unitPrice;
-	}
-	public int getTotalPrice() {
-		return totalPrice;
-	}
-	public void setTotalPrice(int totalPrice) {
-		this.totalPrice = totalPrice;
-	}
-	public String getDateOfOrder() {
-		return dateOfOrder;
-	}
-	public void setDateOfOrder(String dateOfOrder) {
-		this.dateOfOrder = dateOfOrder;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	
-	
-	
+
+
+
+
 }

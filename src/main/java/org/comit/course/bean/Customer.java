@@ -2,148 +2,74 @@ package org.comit.course.bean;
 
 public class Customer {
 	int customerId;
-	int orderId;
-	String name;
-	String lastname;
+	String firstName;
+	String lastName;
 	String phone;
-	String email;
-	String street;
-	String city;
-	String state;
-	String postalcode;
+	String userName;
+	String PostalCode;
 
 	// constructors
 
 	
-	public Customer() {
-		super();
-		customerId = 0;
-		orderId = 0;
-		name = "";
-		lastname = "";
-		phone = "";
-		email = "";
-		street = "";
-		city = "";
-		state = "";
-		postalcode = "";
-	}
 	
 	
-	public Customer(int customerId, int orderId, String name, String lastname, String phone, String email,
-			String street, String city, String state, String postalcode) {
+	public Customer(int customerId, String firstName, String lastName, String phone, String userName,
+			String postalCode) {
 		super();
 		this.customerId = customerId;
-		this.orderId = orderId;
-		this.name = name;
-		this.lastname = lastname;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.phone = phone;
-		this.email = email;
-		this.street = street;
-		this.city = city;
-		this.state = state;
-		this.postalcode = postalcode;
+		this.userName = userName;
+		PostalCode = postalCode;
 	}
-
 
 	public int getCustomerId() {
 		return customerId;
 	}
 
-
 	public void setCustomerId(int customerId) {
 		this.customerId = customerId;
 	}
 
-
-	public int getOrder_Id() {
-		return orderId;
+	public String getFirstName() {
+		return firstName;
 	}
 
-
-	public void setOrder_Id(int orderId) {
-		this.orderId = orderId;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-
-	public String getName() {
-		return name;
+	public String getLastName() {
+		return lastName;
 	}
 
-
-	public void setName(String name) {
-		this.name = name;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-
-
-	public String getLastname() {
-		return lastname;
-	}
-
-
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-
 
 	public String getPhone() {
 		return phone;
 	}
 
-
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
-
-	public String getEmail() {
-		return email;
+	public String getUserName() {
+		return userName;
 	}
 
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
-
-	public String getStreet() {
-		return street;
+	public String getPostalCode() {
+		return PostalCode;
 	}
 
-
-	public void setStreet(String street) {
-		this.street = street;
+	public void setPostalCode(String postalCode) {
+		PostalCode = postalCode;
 	}
-
-
-	public String getCity() {
-		return city;
-	}
-
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-
-	public String getState() {
-		return state;
-	}
-
-
-	public void setState(String state) {
-		this.state = state;
-	}
-
-
-	public String getPostalcode() {
-		return postalcode;
-	}
-
-
-	public void setPostalcode(String postalcode) {
-		this.postalcode = postalcode;
-	}
-
-	
+		
 }
