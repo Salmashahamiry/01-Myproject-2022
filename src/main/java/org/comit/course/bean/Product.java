@@ -5,7 +5,7 @@ public class Product {
 	int productId;
 	String productName;
 	int qty;
-	float price;
+	double price;
 
 //constructors
 
@@ -42,7 +42,7 @@ public class Product {
 		this.qty = qty;
 	}
 
-	public float getPrice() {
+	public double getPrice() {
 		return price;
 	}
 

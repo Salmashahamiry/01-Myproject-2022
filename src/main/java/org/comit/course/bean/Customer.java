@@ -5,23 +5,20 @@ public class Customer {
 	String firstName;
 	String lastName;
 	String phone;
-	String userName;
-	String PostalCode;
+	String postalCode;
 
 	// constructors
-
-	
-	
-	
-	public Customer(int customerId, String firstName, String lastName, String phone, String userName,
-			String postalCode) {
+public Customer()
+{}
+	public Customer(int customerId, String firstName, String lastName, String phone,
+		String postalCode) {
+		
 		super();
 		this.customerId = customerId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.phone = phone;
-		this.userName = userName;
-		PostalCode = postalCode;
+		this.postalCode = postalCode;
 	}
 
 	public int getCustomerId() {
@@ -56,20 +53,13 @@ public class Customer {
 		this.phone = phone;
 	}
 
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
+	
 	public String getPostalCode() {
-		return PostalCode;
+		return postalCode;
 	}
 
 	public void setPostalCode(String postalCode) {
-		PostalCode = postalCode;
+		this.postalCode = postalCode;
 	}
 		
 }

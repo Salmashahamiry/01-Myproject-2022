@@ -1,7 +1,7 @@
 package org.comit.course.bean;
 public class Login {
 	
-	String username;
+	String userName;
 	String password;
 		
 	
@@ -9,12 +9,12 @@ public class Login {
 	//constructor
 	Login(){
 		
-		username="";
+		userName="";
 		password="";
 	}
 	public Login(String username, String password, int timesOfAttend, boolean flag) {
 		super();
-		this.username = username;
+		this.userName = userName;
 		this.password = password;
 
 	}
