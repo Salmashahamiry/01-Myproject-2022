@@ -4,7 +4,7 @@
 <head>
 	<title> Online Shopping System!</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-<link rel="icon"   type="image/x-icon"   href="/img/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 
 </head>
 
@@ -22,8 +22,8 @@
 					<li class="nav-item">
 
 						<a class="navbar-brand" href="#">
-							<img th:src="@{/img/newlogo1.png}" width="30" height="30"
-								class="d-inline-block align-top" alt="logo">
+							<img th:src="@{/img/newlogo1.png}" width="30" height="30" class="d-inline-block align-top"
+								>
 							MAADO ART
 
 						</a>
@@ -45,12 +45,12 @@
 						</a>
 					</li>
 
-
-					<li class="nav-item">
-						<a class="nav-link font-weight-bold" th:href="@{/login}"> Log out
-						</a>
-					</li>
-
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link font-weight-bold" th:href="@{/logout}"> Log out
+							</a>
+						</li>
+					</ul>
 				</ul>
 			</div>
 		</nav>
@@ -59,8 +59,10 @@
 	<div class="jumbotron bg-light border border-success container w-50 mt-4 text-center ">
 		<h5 class="display-5 font-weight-bold ">Welcome Admin to Online Shopping System!</h5>
 		<hr class="my-4  w-50">
+		<p class="mt-5">This application performS CRUD operations, (Creat, Read, Update, Delete)</p>
 
-		<p class="mt-5">Easily manage your data, choose one of the option below :</p>
+		<p class="mt-5"> Choose one of the option below :</p>
+
 	</div>
 
 	</div>

@@ -29,7 +29,6 @@ public class CustomerController {
 		System.out.println("Listcustomers");
 
 		List<Customer> customers = this.Customerservice.listCustomers();
-		System.out.println(customers);
 		return new ModelAndView("Customers", "customers", customers);
 	}
 

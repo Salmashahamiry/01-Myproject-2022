@@ -33,25 +33,22 @@
 								class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item ">
-						<a class="nav-link font-weight-bold" th:href="@{/Products}">Products</a>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link font-weight-bold" th:href="@{/Customers}"> Customers
+						<a class="nav-link font-weight-bold" th:href="@{/Customers}"> List Customers
 						</a>
 					</li>
-					<li class="nav-item ">
-						<a class="nav-link font-weight-bold" th:href="@{/Orders}"> Orders
+					<li class="nav-item active ">
+						<a class="nav-link font-weight-bold" th:href="@{/create}"> New Customer
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link font-weight-bold" th:href="@{/login}"> Log out
+						<a class="nav-link font-weight-bold" th:href="@{/logout}"> Log out
 						</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 
-		<h4 class=mt-3>New Customer</h4>
+		<h4 class=mt-5>New Customer</h4>
 
 		<form th:action="@{/create}" method="post">
 			<div class="form-group">

@@ -6,15 +6,19 @@ public class Product {
 	String productName;
 	int qty;
 	double price;
+	String image;
 
 //constructors
+	public Product() {
+	}
 
-	public Product(int productId, String productName, int qty, float price) {
+	public Product(int productId, String productName, int qty, float price, String image) {
 		super();
 		this.productId = productId;
 		this.productName = productName;
 		this.qty = qty;
 		this.price = price;
+		this.image = image;
 	}
 	// getter and setter
 
@@ -46,8 +50,16 @@ public class Product {
 		return price;
 	}
 
-	public void setPrice(float price) {
+	public void setPrice(double price) {
 		this.price = price;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 }

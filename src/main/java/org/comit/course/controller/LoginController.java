@@ -12,20 +12,20 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class LoginController {
 
-	@GetMapping("/Signin")
+	/*@GetMapping("/Signin")
 	public String showCustomersPage() {
 		System.out.println("login page successfully ");
 		return "Login";
-	}
-
+	}*/
+/*
 	@GetMapping("/login")
 	public String showlogin() {
 		System.out.println("login page successfully ");
 		return "Login";
 	}
-
+*/
 	
-	
+	/*
 	
 	@PostMapping("/login")
 	public String show(@RequestParam String username, @RequestParam String password) {
@@ -42,5 +42,5 @@ public class LoginController {
 
 		}
 
-	}
+	}*/
 }
