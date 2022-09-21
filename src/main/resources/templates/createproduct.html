@@ -2,14 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>List Customers!</title>
+	<title>Creat a New Customer!</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+<link rel="icon"   type="image/x-icon"   href="/img/favicon.ico">
 
 </head>
 
 <body   th:style="'background-image:url(' + @{/img/background7.jpg} + '); background-repeat: no-repeat, repeat; background-size: cover;'">
-	<div class="container   mt-3 w-50">
+<div class="container   mt-3 w-50">
 		<nav class="navbar navbar-expand-lg navbar-light bg-info">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,52 +32,53 @@
 						<a class="nav-link font-weight-bold" th:href="@{/Home}">Home<span
 								class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link font-weight-bold" th:href="@{/Customers}"> List Customers
+					<li class="nav-item ">
+						<a class="nav-link font-weight-bold" th:href="@{/Products}"> List Product
 						</a>
 					</li>
-					<li class="nav-item ">
-						<a class="nav-link font-weight-bold" th:href="@{/create}"> New Customer
+					<li class="nav-item active ">
+						<a class="nav-link font-weight-bold" th:href="@{/createp}"> New Product
 						</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link font-weight-bold" th:href="@{/logout}"> Log out
-
 						</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
-		<h4 class=mt-5>List Customers</h4>
-		<table class="table table-striped mt-5">
-			<thead>
-				<tr>
-					<th scope="col">CustomerId</th>
-					<th scope="col">FirstName&LastName</th>
-					<th scope="col">Phone</th>
-					<th scope="col">PostalCode</th>
-					<th scope="col">#</th>
-					<th scope="col">#</th>
 
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="customer: ${customers}">
-					<td th:text="${customer.customerId}"></td>
-					<td th:text="${customer.firstName}+''+${customer.lastName}"></td>
-					<td th:text="${customer.phone}"></td>
-					<td th:text="${customer.postalCode}">
-					</td>
-					<td>
-						<a th:href="@{/showcustomer/}+${customer.customerId}">Update</a>
-					</td>
-					<td> <a th:href="@{/deletecustomer/}+${customer.customerId}">Delete</a>
-					</td>
+		<h4 class=mt-5>New Product</h4>
 
-				</tr>
+		<form th:action="@{/createp}" method="post">
+			<div class="form-group">
+				
 
-			</tbody>
-		</table>
+			<div class="form-group  font-weight-bold">
+				<label>Product Name</label>
+				<input type="text" class="form-control" name="productname" th:value="${product?.productName}"
+					placeholder="Type in product name" required>
+			</div>
+			<div class="form-group font-weight-bold">
+				<label>Quantity Available</label>
+				<input type="number" class="form-control" name="qty" th:value="${product?.qty}"
+					placeholder="Type in quantity" required>
+			</div>
+
+			<div class="form-group font-weight-bold">
+				<label> Price</label>
+				<input type="number" class="form-control" name="price" th:value="${product?.price}"
+					placeholder="Type in price" required>
+			</div>
+			<div class="form-group font-weight-bold">
+				<label>Image Name</label>
+				<input type="text" class="form-control" name="image" th:value="${product?.image}"
+					placeholder="Type in image name" required>
+			</div>
+			<button type="submit " class="btn btn-primary mt-2" style="min-width: 100px">Save</button>
+
+
+		</form>
 
 	</div>
 

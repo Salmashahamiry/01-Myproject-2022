@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.comit.course.Util.Util;
 import org.comit.course.bean.Customer;
 import org.comit.course.service.CustomerService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,26 +18,22 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class CustomerController {
+
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
 	CustomerService Customerservice;
 
-	/*
-	 * @GetMapping("/Customers") public String showCustomersPage() {
-	 * System.out.println("Customers page successfully linked"); return "Customers";
-	 * }
-	 */
 	@GetMapping("/Customers")
 	public ModelAndView listCustomers() {
-		System.out.println("Listcustomers");
-
+		logger.debug("show list customer");
 		List<Customer> customers = this.Customerservice.listCustomers();
 		return new ModelAndView("Customers", "customers", customers);
 	}
 
 	@GetMapping("/showcustomer/{id}")
 	public ModelAndView showCustomer(@PathVariable("id") int id) {
-
-		System.out.println("Show Update page");
+		logger.debug("show customer");
 
 		Customer customer = this.Customerservice.findCustomer(id);
 
@@ -44,7 +42,7 @@ public class CustomerController {
 
 	@PostMapping("/update")
 	public String updateCustomer(HttpServletRequest request) {
-		System.out.println("Update customer");
+		logger.debug("update customer");
 
 		String id = request.getParameter("id");
 		String first = request.getParameter("first");
@@ -68,14 +66,14 @@ public class CustomerController {
 
 	@GetMapping("/create")
 	public String showCreate() {
-		System.out.println("Show Create");
+		logger.debug("create customer");
 
 		return "createcustomer";
 	}
 
 	@PostMapping("/create")
 	public String createCustomer(HttpServletRequest request) {
-		System.out.println("Create customer");
+		logger.debug("create customer");
 
 		String first = request.getParameter("first");
 		String last = request.getParameter("last");
@@ -89,10 +87,9 @@ public class CustomerController {
 		return "redirect:/Customers";
 
 	}
-	
+
 	@GetMapping("/deletecustomer/{id}")
 	public String deleteCustomer(@PathVariable("id") int id) {
-		System.out.println("Delete customer");
 
 		this.Customerservice.deleteCustomer(id);
 

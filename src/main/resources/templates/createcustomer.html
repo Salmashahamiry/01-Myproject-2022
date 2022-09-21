@@ -8,7 +8,7 @@
 
 </head>
 
-<body>
+<body   th:style="'background-image:url(' + @{/img/background7.jpg} + '); background-repeat: no-repeat, repeat; background-size: cover;'">
 	<div class="container   mt-3 w-50">
 		<nav class="navbar navbar-expand-lg navbar-light bg-info">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -54,23 +54,23 @@
 			<div class="form-group">
 				
 
-			<div class="form-group">
+			<div class="form-group font-weight-bold">
 				<label>FirstName</label>
 				<input type="text" class="form-control" name="first" th:value="${customer?.firstName}"
-					placeolder="Type in First name" required>
+					placeholder="Type in First name" required>
 			</div>
-			<div class="form-group">
+			<div class="form-group font-weight-bold">
 				<label>lastName</label>
 				<input type="text" class="form-control" name="last" th:value="${customer?.lastName}"
 					placeholder="Type in Last name" required>
 			</div>
 
-			<div class="form-group">
+			<div class="form-group font-weight-bold">
 				<label>Phone Number</label>
 				<input type="text" class="form-control" name="phone" th:value="${customer?.phone}"
 					placeholder="Type in Phone" required>
 			</div>
-			<div class="form-group">
+			<div class="form-group font-weight-bold">
 				<label>PostalCode</label>
 				<input type="text" class="form-control" name="postalCode" th:value="${customer?.postalCode}"
 					placeholder="Type in PostalCode" required>

@@ -7,13 +7,27 @@ public class Order {
 
 	int orderId;
 	int customerId;
-	List<Product> products = new ArrayList<>();
+//	List<Product> products = new ArrayList<>();
+	
+	Product product;
+	Customer customer;
 
-	public Order(int orderId, int customerId, String status, List<Product> products) {
+	public Order() {
+	}
+
+	public Order(int orderId, int customerId, String status, Product product) {
 		super();
 		this.orderId = orderId;
 		this.customerId = customerId;
-		this.products = products;
+		this.product = product;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 
 	public int getOrderId() {
@@ -32,12 +46,23 @@ public class Order {
 		this.customerId = customerId;
 	}
 
-	public List<Product> getProducts() {
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
+/*	public List<Product> getProducts() {
 		return products;
 	}
 
 	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
-
+*/
+	
+	
+	
 }

@@ -2,14 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>Customers!</title>
+	<title> Update Customers!</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-<link rel="icon"   type="image/x-icon"   href="/img/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 
 </head>
 
-<body>
-	<div class="container   mt-3 w-50">
+<body   th:style="'background-image:url(' + @{/img/background7.jpg} + '); background-repeat: no-repeat, repeat; background-size: cover;'">
+<div class="container   mt-3 w-50">
 		<nav class="navbar navbar-expand-lg navbar-light bg-info">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,16 +33,14 @@
 								class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item ">
-						<a class="nav-link font-weight-bold" th:href="@{/Products}">Products</a>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link font-weight-bold" th:href="@{/Customers}"> Customers
+						<a class="nav-link font-weight-bold" th:href="@{/Customers}"> List Customers
 						</a>
 					</li>
 					<li class="nav-item ">
-						<a class="nav-link font-weight-bold" th:href="@{/Orders}"> Orders
+						<a class="nav-link font-weight-bold" th:href="@{/create}"> New Customer
 						</a>
 					</li>
+
 					<li class="nav-item">
 						<a class="nav-link font-weight-bold" th:href="@{/logout}"> Log out
 						</a>

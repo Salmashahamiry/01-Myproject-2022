@@ -7,18 +7,19 @@ public class Product {
 	int qty;
 	double price;
 	String image;
+	
 
 //constructors
 	public Product() {
 	}
 
-	public Product(int productId, String productName, int qty, float price, String image) {
+	public Product(int productId, String productName, int qty, double price, String image) {
 		super();
 		this.productId = productId;
 		this.productName = productName;
 		this.qty = qty;
 		this.price = price;
-		this.image = image;
+		this.image = image;//imagename
 	}
 	// getter and setter
 

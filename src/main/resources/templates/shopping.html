@@ -2,15 +2,15 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>Homepage1</title>
+	<title>Shopping Products</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-<link rel="icon"   type="image/x-icon"   href="/img/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 
 </head>
 
-<body>
+<body th:style="'background-image:url(' + @{/img/background8.jpg} + '); background-repeat: no-repeat, repeat; background-size: cover;'">
 
-	<div class="container   w-50">
+	<div class="container mt-3  w-50">
 		<nav class="navbar navbar-expand-lg navbar-light bg-info">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,92 +57,56 @@
 		</nav>
 
 	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm">
-				<div class="card container mt-3" style="width: 18rem;">
-					<img th:src="@{/img/home11.png}" class="card-img-top" alt="picture">
-					<div class="card-body">
-						<h5 class="card-title">Bow</h5>
-						<p class="card-text">DarkBlue
-						</p>
-						<p> $60</p>
-						<a href="#" class="btn btn-primary">Buy</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm">
-				<div class="card container mt-3" style="width: 18rem;">
-					<img th:src="@{/img/home12.png}" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Tie</h5>
-						<p class="card-text">DarkBlue
-						</p>
-						<p> $30</p>
-						<a href="#" class="btn btn-primary">Buy</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm">
-				<div class="card container mt-3" style="width: 18rem;">
-					<img th:src="@{/img/home13.png}" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Tie and Bow set</h5>
-						<p class="card-text">DarkBlue
-						</p>
-						<p> $80</p>
+	<!--
+	<div class="container ">
 
-						<a href="#" class="btn btn-primary">Buy</a>
+
+		<table class="table table-striped mt-5">
+			<thead>
+				<tr>
+					<th scope="col"></th>
+
+				</tr>
+			</thead>
+			<tbody>
+
+
+				<tr class="row " th:each="product: ${products}">
+				<td>	<div class="col-md  mt-3">
+						<div class="card container mt-3" style="width: 18rem;">
+							<img th:src="@{/img/}+${product.image}" class="card-img-top" alt="picture">
+							<div class="card-body ">
+								<h5 class="card-title" th:text="${product.productName} "></h5>
+								<p class="card-text">
+								</p>
+								<p class="font-weight-bold" th:text="@{Price $}+${product.price} "> </p>
+
+								<a th:href="@{/mycartgetid/}+${product.productId}" class="btn btn-primary">Buy</a>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</div>
+				</td>
+				
+				</tr>
 	</div>
 
+-->
 
-	<div class="container">
-		<div class="row">
-			<div class="col-sm">
-				<div class="card container mt-3" style="width: 18rem;">
-					<img th:src="@{/img/home8.png}" class="card-img-top" alt="picture">
+	<div class="jumbotron bg-light border border-success mt-4 container">
+		<div class="row row-cols-1 row-cols-md-4">
+			<div class="col mb-4 " th:each="product: ${products}">
+				<div class="card h-120 page-item">
+					<img class="card-img-top" th:src="@{/img/}+${product.image}" alt="Tieandbow">
 					<div class="card-body">
-						<h5 class="card-title">Tie</h5>
-						<p class="card-text">Black
-						</p>
-						<p> $40</p>
-
-						<a href="#" class="btn btn-primary">Buy</a>
+						<h6 class="card-title" th:text="${product.productName}"></h6>
+						<h6 class="card-subtitle mb-2 " th:text="@{Price $}+${product.price} "></h6>
+						<a th:href="@{/mycartgetid/}+${product.productId}" class="btn btn-primary">Add to Cart</a>
+					
 					</div>
 				</div>
 			</div>
-			<div class="col-sm">
-				<div class="card container mt-3" style="width: 18rem;">
-					<img th:src="@{/img/home9.png}" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Bow</h5>
-						<p class="card-text">DarkBlue
-						</p>
-						<p> $30</p>
-
-						<a href="#" class="btn btn-primary">Buy</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm">
-				<div class="card container mt-3" style="width: 18rem;">
-					<img th:src="@{/img/home10.png}" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Tie</h5>
-						<p class="card-text">Black
-						</p>
-						<p> $40</p>
-
-						<a href="#" class="btn btn-primary">Buy</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		</div><!--  End CARDS -->
+	</div> <!-- End Jumbotron -->
 
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

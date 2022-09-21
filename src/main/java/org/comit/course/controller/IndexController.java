@@ -17,8 +17,6 @@ public class IndexController {
 	@GetMapping({ "/", "/Home" })
 	public String index() {
 
-		System.out.println(" Show index page");
-
 		return "index";
 	
 		}
